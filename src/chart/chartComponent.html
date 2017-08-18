@@ -1,0 +1,18 @@
+<div ng-controller="ChartController" class="authorizationDiv">
+    <div class="inputlogpas">
+        <input placeholder="from" from="ctrl.from">
+    </div>
+    <div class="inputlogpas">
+        <input placeholder="before" before="ctrl.before">
+    </div>
+    <div class="inputlogpas">
+        <input placeholder="id sensor" from="ctrl.sensor">
+    </div>
+    <div>
+        <button type="button" class="btnlogin" ng-click="ctrl.getdata"> go </button>
+    </div>
+</div>
+<div class="demo-container" ng-app="JetFoxApp" ng-controller="ChartController">
+    <div id="chart" dx-chart="$ctrl.chartOptions"></div>
+    <div dx-range-selector="rangeOptions"></div>
+</div>

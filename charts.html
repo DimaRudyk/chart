@@ -1,0 +1,56 @@
+<html ng-app="JetFoxApp">
+
+<head>
+    <title>Jet Fox</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+     <link rel="stylesheet" type="text/css" href="node_modules/devextreme/dist/css/dx.spa.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/devextreme/dist/css/dx.common.css" />
+    <link rel="dx-theme" data-theme="generic.light" href="node_modules/devextreme/dist/css/dx.light.css" /> 
+    <script src="node_modules/angular/angular.min.js"></script>
+     <script src="https://cdn3.devexpress.com/jslib/17.1.5/js/dx.all.js"></script> 
+     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> 
+     <!-- <script src="./src/chart/data.js"></script>  -->
+     <link rel="stylesheet" type ="text/css" href ="./css/chart.css" /> 
+    <script src="./bundle.js"></script>
+</head>
+
+<body class="dx-viewport">
+    <div ng-controller="ChartController" class="authorizationDiv">
+        <div class="inputlogpas">
+            <input placeholder="from" ng-model="from">
+        </div>
+        <div class="inputlogpas">
+            <input placeholder="before" ng-model="before">
+        </div>
+        <div>
+            <button type="button" class="btnlogin" ng-click=""> go </button>
+        </div>
+    </div>
+    <div class="demo-container" ng-app="JetFoxApp" ng-controller="ChartController">
+        <div id="chart" dx-chart="chartOptions"></div>
+        <div dx-range-selector="rangeOptions"></div>
+    </div>
+    <div class="demo-container" ng-app="JetFoxApp" ng-controller="ChartController">
+        <div id="chart1" dx-chart="chartOptions2"></div>
+        <div dx-range-selector="rangeOptions2"></div>
+    </div>
+    <div class="demo-container" ng-app="JetFoxApp" ng-controller="ChartController">
+        <div id="chart2" dx-chart="chartOptions3"></div>
+        <div dx-range-selector="rangeOptions3"></div>
+    </div>
+    <div class="demo-container" ng-app="JetFoxApp" ng-controller="ChartController">
+        <div id="chart3" dx-chart="chartOptions4"></div>
+        <div dx-range-selector="rangeOptions4"></div>
+    </div>
+    <div ng-controller="ChartController as ctrl">
+    <chart-component from="ctrl.from" before="ctrl.before" sensor="ctrl.sensor"></chart-component>
+    </div>
+
+
+    <script src="./bundle.js"></script>
+</body>
+
+</html>

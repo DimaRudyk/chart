@@ -1,0 +1,24 @@
+#chart {
+    height: 440px;
+}
+ 
+
+input{
+    border-radius: 8px;
+}
+.btnlogin{
+    background-color: silver;
+border-radius: 8px;
+    padding: 6px 70px;
+}
+
+.authorizationDiv{
+    
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.inputlogpas{
+
+    margin-bottom: 5px;
+}

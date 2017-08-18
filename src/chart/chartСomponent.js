@@ -3,7 +3,24 @@ module.exports =
 
  
 angular.module('JetFoxApp', ['dx']).component('chartComponent', {
-    templateUrl: 'chartComponent.html',
+    template: `<div class="authorizationDiv">
+    <div class="inputlogpas">
+        <input placeholder="from" from="ctrl.from">
+    </div>
+    <div class="inputlogpas">
+        <input placeholder="before" before="ctrl.before">
+    </div>
+    <div class="inputlogpas">
+        <input placeholder="id sensor" sensor="ctrl.sensor">
+    </div>
+    <div>
+        <button type="button" class="btnlogin" ng-click="ctrl.getdata"> go </button>
+    </div>
+</div>
+<div class="demo-container"  >
+    <div id="chart" dx-chart="$ctrl.chartOptions"></div>
+    <div dx-range-selector="rangeOptions"></div>
+</div>`,
     bindings: {
         from: '<',
         before: '<',

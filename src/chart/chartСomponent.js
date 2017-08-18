@@ -3,7 +3,7 @@ module.exports =
 
  
 angular.module('JetFoxApp', ['dx']).component('chartComponent', {
-    template: 'chartComponent.html',
+    templateUrl: 'chartComponent.html',
     bindings: {
         from: '<',
         before: '<',
@@ -17,6 +17,7 @@ angular.module('JetFoxApp', ['dx']).component('chartComponent', {
             method: 'GET',
             url: 'api/WebChart/GetSensorHistori'+sensorId
         }).then(function successCallback(response) {
+            console.log(response);
             var dataSource = response;
         }, function errorCallback(response) {
             // called asynchronously if an error occurs
@@ -121,6 +122,7 @@ angular.module('JetFoxApp', ['dx']).component('chartComponent', {
                 method: 'GET',
                 url: 'api/WebChart/GetSensorHistori'+sensorId
             }).then(function successCallback(response) {
+                console.log(response);
                  var dataSource = response;
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
@@ -134,6 +136,7 @@ angular.module('JetFoxApp', ['dx']).component('chartComponent', {
                 method: 'GET',
                 url: 'api/WebChart/GetAllById'
             }).then(function successCallback(response) {
+                console.log(response);
                 var sensorId = response;
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
